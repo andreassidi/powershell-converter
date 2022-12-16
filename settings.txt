@@ -1,0 +1,6 @@
+<item key="file" value="*.wav" />
+<item key="date" value="01-01-1970" />
+<item key="source" value="C:\Users\myUser\Desktop\my audio files\*\*" />
+<item key="destination" value="C:\Users\myUser\myMP3AudioFiles\" />
+<item key="trackNum" value="0"/>
+<item key="version" value="1.1"/>
