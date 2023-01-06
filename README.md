@@ -19,7 +19,7 @@ Steps:
 - Install sox-14.4.2-win32.exe or download and install it from [SOX official page](https://sox.sourceforge.net/) 
 - Move all files from sox-14.4.0-libmad-libmp3lame folder into SOX installation path (it should be something like C:\Program Files (x86)\sox-14-4-2)
 - Open PowerShell with admin rights and run ```Set-ExecutionPolicy RemoteSigned```
-- Configure settings.txt, runSOXforAllFilesInsideFolder.bat and index.ps1 (see below the examples)
+- Configure settings.txt and runSOXforAllFilesInsideFolder.bat (see below the examples)
 - Ready for use
 
 ## Settings
