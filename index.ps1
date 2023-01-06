@@ -30,7 +30,7 @@ function mainScript() {
     
     copySourceFilesToDestination -sourceDir $source -destinationDir $destination -fileName $fileName -date $date;
     $runSOXbatchFile = ($PSScriptRoot + '\runSOXforAllFilesInsideFolder.bat');
-    cmd.exe /c ($runSOXbatchFile);
+    cmd.exe /c ($runSOXbatchFile) $destination;
     
     #Deletes all .wav files from destination folder
     if ( test-path ($destination + '*.wav') ) {  
