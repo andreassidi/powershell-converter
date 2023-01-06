@@ -30,7 +30,6 @@ Steps:
 
 - The source parameter has the value of the source folder. For example "C:\Users\myUser\Desktop\my audio files\wav files" or "E:\*\*\"
 
-- The destination parameter has the destination folder as its value. For example "C:\Users\myUser\Desktop\testFolder\". You have to set the destination path to the file runSOXforAllFilesInsideFolder.bat on the first line, "C:\Users\myUser\Desktop\audio folder"
 
 ## Usage
 
