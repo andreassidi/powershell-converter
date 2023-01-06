@@ -26,10 +26,11 @@ Steps:
 
 - Inside the file settings.txt you should define the name of the files you want from the script to process. For example if you want all WAV files the value will be *.wav. If you want all files 2022-summer.wav, 2021-summer.wav, etc then you will set *-summer.wav
 
-- The date parameter is used in case you want to edit some new tracks based on the last run date of the script. If you want this parameter to be used, you should to make changes to the index.ps1 file as well, line 14 set  $convertFilesBasedOnLastWriteTime = 1.
+- The date parameter is used in case you want to edit some new tracks based on the last run date of the script. If you want this parameter to be used, you should to make changes to the property convertFilesBasedOnLastWriteTime, inside settings.txt, set convertFilesBasedOnLastWriteTime = 1.
 
 - The source parameter has the value of the source folder. For example "C:\Users\myUser\Desktop\my audio files\wav files" or "E:\*\*\"
 
+- If the SOX is not installed in the path "C:\Program Files (x86)\sox-14-4-2\sox" then edit the batch file runSOXforAllFilesInsideFolder.bat and update the path in the 3rd line.
 
 ## Usage
 
