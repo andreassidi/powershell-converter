@@ -11,7 +11,7 @@ function mainScript() {
     $destination = $results[3];
 
     #0:false, 1:true
-    $convertFilesBasedOnLastWriteTime = 0; 
+    $convertFilesBasedOnLastWriteTime = [int] $results[4];
 
     if( -not $convertFilesBasedOnLastWriteTime){
         #Using this value, the copySourceFilesToDestination function will copy all files
@@ -48,19 +48,23 @@ function mainScript() {
 function getSettingsData($settings) {
 
     if ( -not($settings[0].contains('file'))) {
-        write-host "There is not settings in the file"
+        write-host "There is not settings in the file";
         return ;
     }
     if ( -not($settings[1].contains('date'))) {
-        write-host "There is not dates inside settings"
+        write-host "There is not dates inside settings";
         return ;
     }
     if ( -not($settings[2].contains('source'))) {
-        write-host "There is not source inside settings"
+        write-host "There is not source inside settings";
         return ;
     }
     if ( -not($settings[3].contains('destination'))) {
-        write-host "There is not destination inside settings"
+        write-host "There is not destination inside settings";
+        return ;
+    }
+    if ( -not($settings[4].contains('convertFilesBasedOnLastWriteTime'))) {
+        write-host "There is not convertFilesBasedOnLastWriteTime property inside settings";
         return ;
     }
     
@@ -68,8 +72,9 @@ function getSettingsData($settings) {
     $date = $settings[1].split(' "=');   
     $source = $settings[2].split('"='); 
     $destination = $settings[3].split('"=');  
-           
-    [String[]]$returnedData = $fileName[7], $date[7], $source[5] , $destination[5]; 
+    $convertFilesBasedOnLastWriteTime = $settings[4].split('"=');
+    
+    [String[]]$returnedData = $fileName[7], $date[7], $source[5], $destination[5], $convertFilesBasedOnLastWriteTime[5]; 
   
     return $returnedData ;
 }
